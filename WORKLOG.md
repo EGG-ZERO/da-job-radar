@@ -17,7 +17,16 @@
 - 正文恰好排满整页时，独立PageBreak段落会产生空白页（见简历项目同日记录），此坑在Word排版通用
 
 待办（用户动作）：
-1. GitHub Desktop发布仓库（public）→ Settings/Pages选main分支/docs目录 → Actions手动跑一次验证
-2. 把`src/build_site.py`的REPO_URL换成真实仓库地址重跑build_site
+1. ~~GitHub Desktop发布仓库~~ 已改走gh CLI，见下一条记录
+2. ~~REPO_URL替换~~ 已完成
 3. 可选：仓库Secrets加ANTHROPIC_API_KEY升级LLM简报
-4. 中国市场快照模块：等Chrome扩展连上（半自动采集）或用户手动Ctrl+S保存BOSS直聘搜索页到china_snapshot/inbox/，解析脚本届时补
+4. 中国市场快照模块：用户决定暂不做（2026-07-05），看板页脚与文档已如实标注口径限制
+
+## 2026-07-05 20:25
+
+发布上线（装gh CLI+设备码登录，账号EGG-ZERO）：
+
+- 仓库 https://github.com/EGG-ZERO/da-job-radar 已推送；Pages已启用（main分支/docs目录），看板在线：**https://egg-zero.github.io/da-job-radar/**（已验证HTTP 200）
+- REPO_URL已替换为真实地址并重建站点
+- **遗留一个用户动作**：OAuth令牌无workflow权限（两次设备码补授权都超时未完成），工作流文件暂移至`setup/update.yml`。用户需按`setup/README.md`在GitHub网页把它建回`.github/workflows/update.yml`（2分钟），否则每日自动更新不会启动，看板停留在首日数据
+- 踩坑：gh auth login的输出接`| head`会截断管道导致进程被SIGPIPE杀死（第一次登录假成功）；设备码流程stdin被关闭会context deadline exceeded，须用`{ printf '\n'; sleep 900; }|`保持stdin打开
