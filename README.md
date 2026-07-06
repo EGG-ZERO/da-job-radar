@@ -13,6 +13,7 @@
 ```bash
 python src/fetch_jobs.py     # 抓取7源 -> data/raw/当日.json
 python src/parse_skills.py   # 分类+技能提取+去重累积 -> data/jobs.csv, data/daily_stats.json
+python src/export_excel.py   # Excel报表（KPI概览/明细/交叉表）-> reports/数据岗位周报.xlsx
 python src/daily_brief.py    # 当日简报 -> data/brief.json（设ANTHROPIC_API_KEY则用LLM版）
 python src/build_site.py     # 渲染看板 -> docs/index.html
 ```

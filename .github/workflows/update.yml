@@ -18,9 +18,11 @@ jobs:
         with:
           python-version: "3.12"
 
-      # 管线本体零第三方依赖；anthropic只服务于LLM简报，装失败不影响主流程
-      - name: Install optional deps
-        run: pip install anthropic || true
+      # openpyxl服务于Excel报表导出（必需）；anthropic只服务于LLM简报，装失败不影响主流程
+      - name: Install deps
+        run: |
+          pip install openpyxl
+          pip install anthropic || true
 
       - name: Run pipeline
         env:
@@ -28,6 +30,7 @@ jobs:
         run: |
           python src/fetch_jobs.py
           python src/parse_skills.py
+          python src/export_excel.py
           python src/daily_brief.py
           python src/build_site.py
 
@@ -35,6 +38,6 @@ jobs:
         run: |
           git config user.name "da-job-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data docs
+          git add data docs reports
           git commit -m "chore: daily update $(date -u +%F)" || echo "no changes"
           git push

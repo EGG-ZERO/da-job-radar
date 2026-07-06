@@ -30,3 +30,15 @@
 - REPO_URL已替换为真实地址并重建站点
 - **遗留一个用户动作**：OAuth令牌无workflow权限（两次设备码补授权都超时未完成），工作流文件暂移至`setup/update.yml`。用户需按`setup/README.md`在GitHub网页把它建回`.github/workflows/update.yml`（2分钟），否则每日自动更新不会启动，看板停留在首日数据
 - 踩坑：gh auth login的输出接`| head`会截断管道导致进程被SIGPIPE杀死（第一次登录假成功）；设备码流程stdin被关闭会context deadline exceeded，须用`{ printf '\n'; sleep 900; }|`保持stdin打开
+
+## 2026-07-06 01:18
+
+工作流归位并完成云端闭环验证：
+
+- 用户完成workflow scope设备码授权（第三次，前两次15分钟窗口过期）
+- setup/update.yml归位到.github/workflows/，setup/临时目录删除，推送成功
+- 手动触发首跑：run 28746963724 success。云端管线完整执行（抓取7源→解析→简报→建站→bot提交），产生commit 12f7efc
+- 线上验证：egg-zero.github.io/da-job-radar 页面时间戳已变为云端运行时间（16:14 UTC），证明看板脱离本机自主运转
+- 明起每日北京时间06:30自动更新，无需任何人工介入
+
+项目状态：完成并在线运行。后续可选增强见README备注（中国快照模块、薪资模块等30条带薪岗位后自动启用）。
