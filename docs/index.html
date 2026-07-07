@@ -73,18 +73,18 @@ noscript { display: block; margin-top: var(--space-6); color: var(--color-warnin
   <h1>数据岗位需求雷达 <span class="accent">DA Job Radar</span></h1>
   <div class="sub">
     <span class="tag">每日自动更新</span><span class="tag">7个公开数据源</span><span class="tag">GitHub Actions驱动</span>
-    监测国际远程数据类岗位的技能需求 · 最后更新 2026-07-06 23:35:47（UTC）
+    监测国际远程数据类岗位的技能需求 · 最后更新 2026-07-07 23:28:25（UTC）
   </div>
 </header>
 
 <div class="kpis">
-  <div class="kpi"><div class="label">今日在架数据岗</div><div class="value">153</div><div class="hint">7源聚合去重后</div></div>
-  <div class="kpi"><div class="label">今日新上架</div><div class="value">25</div><div class="hint">首次出现的岗位</div></div>
-  <div class="kpi"><div class="label">累计追踪岗位</div><div class="value">202</div><div class="hint">历史去重总量</div></div>
+  <div class="kpi"><div class="label">今日在架数据岗</div><div class="value">152</div><div class="hint">7源聚合去重后</div></div>
+  <div class="kpi"><div class="label">今日新上架</div><div class="value">17</div><div class="hint">首次出现的岗位</div></div>
+  <div class="kpi"><div class="label">累计追踪岗位</div><div class="value">219</div><div class="hint">历史去重总量</div></div>
   <div class="kpi"><div class="label">数据源状态</div><div class="value">7/7</div><div class="hint">全部正常</div></div>
 </div>
 
-<div class="brief"><b>今日简报</b>（规则生成）：今日在架数据相关岗153条，新上架25条。较上一采集日增加6条。需求最高技能：SQL(59)、机器学习(59)、Python(48)。岗位构成以其他数据岗为主（56条）。</div>
+<div class="brief"><b>今日简报</b>（规则生成）：今日在架数据相关岗152条，新上架17条。较上一采集日减少1条。需求最高技能：机器学习(59)、SQL(58)、Python(47)。岗位构成以其他数据岗为主（55条）。</div>
 
 <div class="grid">
   <div class="card wide"><h2>技能需求Top15</h2>
@@ -109,7 +109,7 @@ noscript { display: block; margin-top: var(--space-6); color: var(--color-warnin
 </div>
 
 <script>
-const DATA = {"skills": [["SQL", 38.6], ["机器学习", 38.6], ["Python", 31.4], ["Excel", 17.0], ["统计学", 15.7], ["AWS", 13.7], ["A/B测试", 12.4], ["Tableau", 10.5], ["Azure", 9.8], ["Power BI", 9.2], ["Snowflake", 7.8], ["GCP", 7.8], ["Airflow", 7.2], ["ETL", 7.2], ["R", 7.2]], "skillCounts": [59, 59, 48, 26, 24, 21, 19, 16, 15, 14, 12, 12, 11, 11, 11], "trendDates": ["2026-07-05", "2026-07-06"], "trendSeries": [{"name": "SQL", "data": [38.8, 38.6]}, {"name": "Python", "data": [32.0, 31.4]}, {"name": "机器学习", "data": [41.5, 38.6]}, {"name": "Excel", "data": [15.6, 17.0]}, {"name": "Tableau", "data": [10.9, 10.5]}, {"name": "A/B测试", "data": [13.6, 12.4]}], "categories": [["其他数据岗", 56], ["数据分析/BI", 50], ["数据科学/算法", 28], ["数据开发/工程", 19]], "regions": [["USA", 54], ["其他", 38], ["欧洲", 15], ["Germany", 14], ["全球远程", 10], ["加拿大", 8], ["拉美", 6], ["UK", 5]], "sources": [["jobicy", 78], ["remotive", 28], ["arbeitnow", 13], ["himalayas", 12], ["workingnomads", 11], ["remoteok", 10], ["eleduck", 1]]};
+const DATA = {"skills": [["机器学习", 38.8], ["SQL", 38.2], ["Python", 30.9], ["Excel", 19.1], ["统计学", 16.4], ["AWS", 12.5], ["A/B测试", 11.2], ["Tableau", 9.2], ["Azure", 8.6], ["Power BI", 7.9], ["GCP", 7.2], ["Snowflake", 7.2], ["dbt", 7.2], ["Airflow", 7.2], ["R", 6.6]], "skillCounts": [59, 58, 47, 29, 25, 19, 17, 14, 13, 12, 11, 11, 11, 11, 10], "trendDates": ["2026-07-05", "2026-07-06", "2026-07-07"], "trendSeries": [{"name": "SQL", "data": [38.8, 38.6, 38.2]}, {"name": "Python", "data": [32.0, 31.4, 30.9]}, {"name": "机器学习", "data": [41.5, 38.6, 38.8]}, {"name": "Excel", "data": [15.6, 17.0, 19.1]}, {"name": "Tableau", "data": [10.9, 10.5, 9.2]}, {"name": "A/B测试", "data": [13.6, 12.4, 11.2]}], "categories": [["其他数据岗", 55], ["数据分析/BI", 54], ["数据科学/算法", 27], ["数据开发/工程", 16]], "regions": [["USA", 58], ["其他", 30], ["Germany", 18], ["欧洲", 15], ["全球远程", 11], ["加拿大", 6], ["UK", 6], ["拉美", 5]], "sources": [["jobicy", 77], ["remotive", 28], ["arbeitnow", 17], ["workingnomads", 12], ["remoteok", 10], ["himalayas", 6], ["eleduck", 2]]};
 (function () {
   if (typeof echarts === "undefined") { return; }
   const css = getComputedStyle(document.documentElement);
