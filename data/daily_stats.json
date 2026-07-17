@@ -703,6 +703,64 @@
     "median_max": 195000
    },
    "updated_at": "2026-07-16T23:23:16+00:00"
+  },
+  "2026-07-17": {
+   "total_data_jobs": 133,
+   "new_today": 19,
+   "failed_sources": [],
+   "by_skill": {
+    "机器学习": 64,
+    "SQL": 46,
+    "Python": 41,
+    "AWS": 28,
+    "Excel": 20,
+    "统计学": 18,
+    "A/B测试": 15,
+    "dbt": 14,
+    "Azure": 13,
+    "ETL": 12,
+    "Airflow": 10,
+    "Power BI": 9,
+    "Tableau": 9,
+    "GCP": 8,
+    "R": 8,
+    "Snowflake": 8,
+    "BigQuery": 7,
+    "Spark": 6,
+    "Looker": 6,
+    "pandas": 3
+   },
+   "by_category": {
+    "其他数据岗": 58,
+    "数据分析/BI": 38,
+    "数据科学/算法": 25,
+    "数据开发/工程": 12
+   },
+   "by_region": {
+    "USA": 47,
+    "其他": 36,
+    "欧洲": 15,
+    "全球远程": 11,
+    "Germany": 11,
+    "加拿大": 4,
+    "拉美": 4,
+    "UK": 4,
+    "印度": 1
+   },
+   "by_source": {
+    "remoteok": 2,
+    "remotive": 41,
+    "arbeitnow": 11,
+    "jobicy": 61,
+    "workingnomads": 12,
+    "himalayas": 6
+   },
+   "salary_usd_year": {
+    "n": 2,
+    "median_min": 160000,
+    "median_max": 231000
+   },
+   "updated_at": "2026-07-17T23:14:39+00:00"
   }
  }
 }
